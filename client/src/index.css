@@ -107,11 +107,12 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-full;
+    background-color: hsl(var(--muted-foreground) / 0.2);
+    @apply rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/30;
+    background-color: hsl(var(--muted-foreground) / 0.3);
   }
 }
 
@@ -141,19 +142,35 @@
   }
   
   .status-high-priority {
-    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+    @apply bg-red-100 text-red-800 dark:text-red-300;
+    background-color: rgb(254 226 226); /* red-100 */
+  }
+  .dark .status-high-priority {
+    background-color: rgb(127 29 29 / 0.3); /* red-900/30 */
   }
   
   .status-medium-priority {
-    @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+    @apply bg-orange-100 text-orange-800 dark:text-orange-300;
+    background-color: rgb(255 237 213); /* orange-100 */
+  }
+  .dark .status-medium-priority {
+    background-color: rgb(154 52 18 / 0.3); /* orange-900/30 */
   }
   
   .status-low-priority {
-    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+    @apply bg-green-100 text-green-800 dark:text-green-300;
+    background-color: rgb(220 252 231); /* green-100 */
+  }
+  .dark .status-low-priority {
+    background-color: rgb(20 83 45 / 0.3); /* green-900/30 */
   }
   
   .status-urgent {
-    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+    @apply bg-red-100 text-red-800 dark:text-red-300;
+    background-color: rgb(254 226 226); /* red-100 */
+  }
+  .dark .status-urgent {
+    background-color: rgb(127 29 29 / 0.3); /* red-900/30 */
   }
   
   .status-critical {
@@ -161,11 +178,18 @@
   }
   
   .ai-draft-ready {
-    @apply bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300;
+    @apply bg-purple-100 text-purple-800 dark:text-purple-300;
+    background-color: rgb(243 232 255); /* purple-100 */
+  }
+  .dark .ai-draft-ready {
+    background-color: rgb(88 28 135 / 0.3); /* purple-900/30 */
   }
   
   .email-card {
-    @apply border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer;
+    @apply border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer;
+  }
+  .dark .email-card:hover {
+    background-color: rgb(31 41 55 / 0.5); /* gray-800/50 */
   }
   
   .sidebar-link {
@@ -173,11 +197,15 @@
   }
   
   .sidebar-link-active {
-    @apply bg-blue-50 dark:bg-blue-900/30 text-primary font-medium;
+    @apply bg-blue-50 text-primary font-medium dark:text-primary;
+    background-color: rgb(239 246 255); /* blue-50 */
+  }
+  .dark .sidebar-link-active {
+    background-color: rgb(30 58 138 / 0.3); /* blue-900/30 */
   }
   
   .stats-card {
-    @apply bg-surface dark:bg-card p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700;
+    @apply bg-white dark:bg-card p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700;
   }
   
   .gradient-border {
@@ -185,15 +213,27 @@
   }
   
   .meeting-urgent {
-    @apply bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500;
+    @apply bg-red-50 border-l-4 border-red-500;
+    background-color: rgb(254 242 242); /* red-50 */
+  }
+  .dark .meeting-urgent {
+    background-color: rgb(127 29 29 / 0.2); /* red-900/20 */
   }
   
   .meeting-normal {
-    @apply bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500;
+    @apply bg-blue-50 border-l-4 border-blue-500;
+    background-color: rgb(239 246 255); /* blue-50 */
+  }
+  .dark .meeting-normal {
+    background-color: rgb(30 58 138 / 0.2); /* blue-900/20 */
   }
   
   .meeting-low {
-    @apply bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500;
+    @apply bg-green-50 border-l-4 border-green-500;
+    background-color: rgb(240 253 244); /* green-50 */
+  }
+  .dark .meeting-low {
+    background-color: rgb(20 83 45 / 0.2); /* green-900/20 */
   }
 }
 

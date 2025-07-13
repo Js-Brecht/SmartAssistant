@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Link } from "wouter";
 import { formatDistanceToNow } from "date-fns";
-import { Eye, Plus, Paperclip, Clock, Tag, Zap } from "lucide-react";
+import { Eye, Plus, Paperclip, Clock, Tag, Zap, Mail } from "lucide-react";
 import type { EmailWithAnalysis } from "@/lib/types";
 
 interface PriorityEmailsProps {
@@ -15,7 +15,7 @@ interface PriorityEmailsProps {
 export default function PriorityEmails({ emails, isLoading }: PriorityEmailsProps) {
   if (isLoading) {
     return (
-      <Card className="bg-surface dark:bg-card shadow-sm">
+      <Card className="bg-white dark:bg-card shadow-sm">
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle>Priority Emails</CardTitle>
@@ -73,7 +73,7 @@ export default function PriorityEmails({ emails, isLoading }: PriorityEmailsProp
   };
 
   return (
-    <Card className="bg-surface dark:bg-card shadow-sm">
+    <Card className="bg-white dark:bg-card shadow-sm">
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-semibold">Priority Emails</CardTitle>
